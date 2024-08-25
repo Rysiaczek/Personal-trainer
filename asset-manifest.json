@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Personal-trainer/static/css/main.f855e6bc.css",
+    "main.js": "/Personal-trainer/static/js/main.b61d9079.js",
+    "index.html": "/Personal-trainer/index.html",
+    "main.f855e6bc.css.map": "/Personal-trainer/static/css/main.f855e6bc.css.map",
+    "main.b61d9079.js.map": "/Personal-trainer/static/js/main.b61d9079.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.b61d9079.js"
+  ]
+}
