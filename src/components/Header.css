@@ -1,0 +1,71 @@
+.header {
+  width: 100%;
+  z-index: 0;
+}
+.header .container {
+  height: 90vh;
+}
+.header-content-title p {
+  font-size: 42px;
+}
+
+#myVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 35% 65%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.header-content-title p span {
+  display: block;
+  margin-top: -110px;
+}
+
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .header-content-title p {
+    font-size: 80px;
+  }
+  .header-content-title p span {
+    margin-top: -40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-content-title p {
+    font-size: 100px;
+  }
+  .header-content-title p span {
+    margin-top: -60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-content-title p {
+    font-size: 130px;
+  }
+  .header-content-title p span {
+    margin-top: -70px;
+  }
+}
+
+@media (min-width: 1400px) {
+}
