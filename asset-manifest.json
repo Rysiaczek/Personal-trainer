@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Personal-trainer/static/css/main.8a1f1a40.css",
-    "main.js": "/Personal-trainer/static/js/main.51db28c5.js",
+    "main.css": "/Personal-trainer/static/css/main.a716c70f.css",
+    "main.js": "/Personal-trainer/static/js/main.4fc6d4e2.js",
     "index.html": "/Personal-trainer/index.html",
-    "main.8a1f1a40.css.map": "/Personal-trainer/static/css/main.8a1f1a40.css.map",
-    "main.51db28c5.js.map": "/Personal-trainer/static/js/main.51db28c5.js.map"
+    "main.a716c70f.css.map": "/Personal-trainer/static/css/main.a716c70f.css.map",
+    "main.4fc6d4e2.js.map": "/Personal-trainer/static/js/main.4fc6d4e2.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a1f1a40.css",
-    "static/js/main.51db28c5.js"
+    "static/css/main.a716c70f.css",
+    "static/js/main.4fc6d4e2.js"
   ]
 }
