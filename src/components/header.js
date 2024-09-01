@@ -24,7 +24,9 @@ function Header() {
               </div>
 
               <div className="col-0 col-lg-1 d-none d-lg-block align-self-end text-end">
-                <p className="text-light ">scroll</p>
+                <p className="text-light overflow-hidden">
+                  <hr className="border-light border-5 scroll-hr" /> scroll
+                </p>
               </div>
             </div>
           </div>

@@ -36,6 +36,11 @@
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
+.scroll-hr {
+  rotate: 90deg;
+  text-align: right;
+  width: 50%;
+}
 
 @media (min-width: 576px) {
 }
