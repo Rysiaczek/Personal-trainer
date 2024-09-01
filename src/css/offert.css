@@ -1,0 +1,94 @@
+.offert {
+  background-color: #333;
+  width: 100%;
+  border-radius: 0 0 5% 5%;
+}
+.slider-container {
+  width: 80%;
+  margin: 0 auto;
+  height: 60vh;
+}
+.title {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.item {
+  background-color: rgba(0, 0, 0, 0.247);
+  color: white;
+  width: 20px;
+  height: 450px;
+  scale: 0.9;
+  width: 100%;
+}
+.item-body p {
+  border-top: 1px solid rgb(220, 53, 69);
+  width: 80%;
+  margin-left: 20%;
+  font-size: 16px;
+}
+
+@media (min-width: 500px) {
+  .item-body p {
+    border-top: 1px solid rgb(220, 53, 69);
+    width: 80%;
+    margin-left: 20%;
+    font-size: 20px;
+  }
+  .title {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 600px) {
+  .item-body p {
+    border-top: 1px solid rgb(220, 53, 69);
+    width: 80%;
+    margin-left: 20%;
+    font-size: 16px;
+  }
+  .title {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 800px) {
+  .item-body p {
+    border-top: 1px solid rgb(220, 53, 69);
+    width: 80%;
+    margin-left: 20%;
+    font-size: 18px;
+  }
+  .title {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+  .item-body p {
+    border-top: 1px solid rgb(220, 53, 69);
+    width: 80%;
+    margin-left: 20%;
+    font-size: 20px;
+  }
+  .title {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+}

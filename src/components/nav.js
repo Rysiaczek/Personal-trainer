@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 import React, { useState, useEffect, useRef } from "react";
 
-import "./nav.css";
+import "../css/nav.css";
 
 function NavBarr() {
   const [windowY, setWindowY] = useState(false);
@@ -16,6 +16,8 @@ function NavBarr() {
     if (navbarRef.current) {
       navbarRef.current.style.top = "0px";
       document.querySelector(".nav hr").style.opacity = "1";
+      document.querySelector(".nav").style.backgroundColor =
+        "rgba(51, 51, 51, 0.7)";
     }
   };
 
@@ -23,12 +25,14 @@ function NavBarr() {
     document.querySelector("hr").style.opacity = "0.7";
     if (navbarRef.current) {
       navbarRef.current.style.top = windowY ? "-80px" : "0px";
+      document.querySelector(".nav").style.backgroundColor =
+        "rgba(51, 51, 51, 0)";
     }
   };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 150) {
         setWindowY(true);
       } else {
         setWindowY(false);
@@ -51,7 +55,13 @@ function NavBarr() {
         ref={navbarRef}
         expand="lg"
         className="bg-body-transparent z-3 fixed-top flex-wrap nav"
-        style={responsive ? null : windowY ? { top: "-80px" } : { top: "0px" }}>
+        style={
+          responsive
+            ? null
+            : windowY
+            ? { top: "-80px", backgroundColor: "rgba(51, 51, 51, 0)" }
+            : { top: "0px", backgroundColor: "rgba(51, 51, 51, 0.7)" }
+        }>
         <Container>
           <Navbar.Brand href="#home" className="text-uppercase text-light">
             dreamfit
@@ -62,8 +72,14 @@ function NavBarr() {
               <Nav.Link href="#home " className="text-light">
                 Home
               </Nav.Link>
-              <Nav.Link href="#link" className="text-light">
-                Link
+              <Nav.Link href="#About" className="text-light">
+                O mnie
+              </Nav.Link>
+              <Nav.Link href="#Offert" className="text-light">
+                Oferta
+              </Nav.Link>
+              <Nav.Link href="#Contact" className="text-light">
+                Kontakt
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -74,10 +90,10 @@ function NavBarr() {
             onMouseEnter={handleMouseEnter}
             style={
               responsive
-                ? { opacity: "0" }
+                ? { display: "none" }
                 : windowY
                 ? { opacity: "0.7" }
-                : { opacity: "0" }
+                : { display: "none" }
             }
           />
         </div>
