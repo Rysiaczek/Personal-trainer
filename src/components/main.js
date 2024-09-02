@@ -2,7 +2,7 @@ import "../css/main.css";
 
 function Main() {
   return (
-    <div className="main" id="About">
+    <div className="main position-relative z-3" id="About">
       <div className="container-fluid  pt-5">
         <div className="row justify-content-center">
           <p className=" main-title col-12 display-1 text-center pt-5 text-light">

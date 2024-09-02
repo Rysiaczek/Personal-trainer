@@ -54,7 +54,7 @@ function NavBarr() {
         onMouseLeave={handleMouseLeave}
         ref={navbarRef}
         expand="lg"
-        className="bg-body-transparent z-3 fixed-top flex-wrap nav"
+        className="bg-body-transparent z-3 fixed-top flex-wrap nav "
         style={
           responsive
             ? null

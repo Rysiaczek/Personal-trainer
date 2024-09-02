@@ -2,7 +2,7 @@ import "../css/secondmain.css";
 
 function Secondmain() {
   return (
-    <section className="secondmain">
+    <section className="secondmain vertical ">
       <div className="container-fluid">
         <div>
           <img

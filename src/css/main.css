@@ -1,6 +1,7 @@
 .main {
   height: max-content;
   background-color: #333;
+  z-index: 10;
 }
 .main-title {
   margin-bottom: 150px;

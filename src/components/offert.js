@@ -37,7 +37,7 @@ function Offert() {
     ],
   };
   return (
-    <div className="offert" id="Offert">
+    <div className="offert z-3 position-relative vertical" id="Offert">
       <div className="slider-container">
         <Slider {...settings}>
           <div className="item">

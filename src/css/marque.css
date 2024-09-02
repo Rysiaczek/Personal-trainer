@@ -1,21 +1,39 @@
 .marque {
+  display: flex;
+  justify-content: center;
+  min-height: 200vh;
   background-color: #333;
-  width: 100%;
   position: relative;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
-.marque p {
-  color: white;
-  font-size: 30rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.marque-bg {
+.marque-img img {
+  z-index: 1;
   position: absolute;
-  top: 0;
-  left: 0;
-}
-.marque-bg img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: 50% 35%;
+  transform: scale(1);
+}
+.marque-bg {
+  z-index: -1;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%) rotate(7deg) scale(1.5);
+}
+.marque-bg p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 80px;
+  font-weight: 700;
+}
+.marque-bg p.marque-bg__event {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
 }
