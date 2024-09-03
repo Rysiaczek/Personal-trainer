@@ -59,8 +59,8 @@ function NavBarr() {
           responsive
             ? null
             : windowY
-            ? { top: "-80px", backgroundColor: "rgba(51, 51, 51, 0)" }
-            : { top: "0px", backgroundColor: "rgba(51, 51, 51, 0.7)" }
+            ? { top: "-80px", backgroundColor: "rgba(0, 0, 0, 0)" }
+            : { top: "0px", backgroundColor: "rgba(0, 0, 0, 0.3)" }
         }>
         <Container>
           <Navbar.Brand href="#home" className="text-uppercase text-light">

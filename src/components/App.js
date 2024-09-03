@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Contact from "./contact";
 import Header from "./header";
 import Marque from "./marque";
-import Main from "./main";
+import About from "./about";
 import NavBarr from "./nav";
 import Offert from "./offert";
 import Secondmain from "./secondmain";
@@ -28,7 +28,7 @@ function App() {
         <>
           <NavBarr />
           <Header />
-          <Main />
+          <About />
           <Secondmain />
           <Marque />
           <Offert />

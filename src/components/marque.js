@@ -25,7 +25,7 @@ const Marque = () => {
   }, []);
 
   return (
-    <div className="marque position-relative z-3 vertical ">
+    <div className="marque position-relative z-3  ">
       <div className="marque-img sticky ">
         <img src={process.env.PUBLIC_URL + "/img/photo.jpg"} alt="" />
         <div className="marque-bg">
