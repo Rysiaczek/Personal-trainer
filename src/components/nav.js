@@ -64,7 +64,7 @@ function NavBarr() {
         }>
         <Container>
           <Navbar.Brand href="#home" className="text-uppercase text-light">
-            dreamfit
+            Power on gym
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-4" />
           <Navbar.Collapse id="basic-navbar-nav">

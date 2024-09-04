@@ -4,6 +4,14 @@ import React, { useEffect, useState } from "react";
 function Header() {
   const [height, setHeight] = useState(false);
 
+  const handleScroll = () => {
+    const scrollToElement = document.querySelector(".about");
+    scrollToElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   const heroShadow = () => {
     const mainElement = document.querySelector(".main");
     if (mainElement) {
@@ -62,7 +70,9 @@ function Header() {
               </div>
 
               <div className="scroll col-0 col-lg-1 d-none d-lg-block align-self-center text-end h-25">
-                <p className="text-light overflow-hidden align-self-center">
+                <p
+                  className="text-light overflow-hidden align-self-center"
+                  onClick={() => handleScroll()}>
                   <hr className="border-light border-3 scroll-hr" />
                   scroll
                 </p>

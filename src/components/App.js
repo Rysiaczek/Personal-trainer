@@ -13,28 +13,39 @@ import LoadingScreen from "./LoadingScreen";
 import "../css/App.css";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    // Listener do wykrycia pełnego załadowania strony
+    const handlePageLoad = () => {
+      setIsLoading(false); // Ustawia stan na false, gdy strona jest załadowana
+    };
+
+    // Sprawdzaj, czy strona jest już załadowana (na wypadek, gdyby efekt uruchomił się po załadowaniu)
+    if (document.readyState === "complete") {
+      handlePageLoad();
+    } else {
+      window.addEventListener("load", handlePageLoad);
+    }
+
+    // Usuń listener przy odmontowywaniu komponentu
+    return () => {
+      window.removeEventListener("load", handlePageLoad);
+    };
   }, []);
 
+  if (isLoading) {
+    return <LoadingScreen loading={isLoading} />;
+  }
   return (
     <div>
-      <LoadingScreen loading={loading} />
-      {!loading && (
-        <>
-          <NavBarr />
-          <Header />
-          <About />
-          <Secondmain />
-          <Marque />
-          <Offert />
-          <Contact />
-        </>
-      )}
+      <NavBarr />
+      <Header />
+      <About />
+      <Secondmain />
+      <Marque />
+      <Offert />
+      <Contact />
     </div>
   );
 }

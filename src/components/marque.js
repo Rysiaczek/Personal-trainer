@@ -66,30 +66,3 @@ const Marque = () => {
 };
 
 export default Marque;
-{
-  /* <div className="marque-clouds">
-<Marquee speed={90}>
-  <img
-    src={process.env.PUBLIC_URL + "/img/cloud1.png"}
-    alt=""
-    style={{ width: "200px", height: "100px" }}
-  />
-</Marquee>
-<Marquee speed={70} className="cloud-item">
-  <img
-    src={process.env.PUBLIC_URL + "/img/cloud1.png"}
-    alt=""
-    style={{ width: "250px", height: "150px" }}
-    className="img2"
-  />
-</Marquee>
-<Marquee speed={120}>
-  <img
-    src={process.env.PUBLIC_URL + "/img/cloud1.png"}
-    alt=""
-    style={{ width: "200px", height: "100px" }}
-  />
-</Marquee>
-<div className="marque-bg"></div>
-</div> */
-}

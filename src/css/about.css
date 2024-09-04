@@ -1,67 +1,111 @@
 .about {
   width: 100%;
-  height: 200vh;
+  height: 300vh;
   background-color: #333;
+  overflow: hidden;
+}
+.marque-clouds {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+}
+.about-title {
+  width: 100%;
+  height: 20%;
+}
+.about-title__img {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about-title__img img {
+  border-radius: 0px 121px 0px 121px;
+  -webkit-border-radius: 0px 121px 0px 121px;
+  -moz-border-radius: 0px 121px 0px 121px;
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+.about-title__text {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .about-content__element {
-  width: 30%;
+  width: 100%;
   color: white;
+  position: relative;
   position: absolute;
+  padding: 0 30px;
+}
+.about-content__element p {
+  font-size: 1rem;
+}
+.about-content__element-oneImg {
+  top: 25%;
+  left: 2%;
+  z-index: -1;
+}
+.about-content__element-oneImg img {
+  display: none;
+  width: 600px;
+  height: 600px;
+  border-radius: 121px 0px 0px 0px;
 }
 .about-content__element-one {
-  top: 10%;
-  right: 10%;
+  top: 40%;
   text-align: right;
 }
+
 .about-content__element-two {
-  top: 30%;
-  left: 10%;
+  top: 55%;
   text-align: left;
 }
 .about-content__element-three {
-  top: 50%;
-  right: 10%;
+  top: 70%;
   text-align: right;
+}
+.about-content__element-four {
+  top: 85%;
+
+  text-align: left;
 }
 .about-zip {
   width: 2px;
   position: absolute;
-  top: 10%;
+  top: 32%;
   bottom: 0%;
   left: 50%;
   transform: translateX(-50%);
 }
 .zip__element {
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 300px;
+  /* width: 300px;
+  height: 400px; */
   border-radius: 10px;
-  position: sticky;
+  /* position: sticky; */
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
-/* .main {
-  height: max-content;
-  background-color: #333;
-  z-index: 10;
+.cloud1 {
+  width: 200px;
+  height: 100px;
 }
-.main-title {
-  margin-bottom: 150px;
+.cloud2 {
+  width: 100px;
+  height: 50px;
 }
-.main-title {
-  margin-bottom: 50px;
-}
-.main-content-first {
-  font-size: 20px;
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-.main-content-sub {
-  font-size: 16px;
-}
-
-.marquee p {
-  font-size: 30px;
+.cloud3 {
+  width: 150px;
+  height: 80px;
 }
 
 @media (min-width: 576px) {
@@ -71,23 +115,106 @@
 }
 
 @media (min-width: 992px) {
-  .main-title {
-    margin-bottom: 150px;
+  .cloud1 {
+    width: 300px;
+    height: 150px;
   }
-  .main-content-first {
-    font-size: 30px;
-    margin-bottom: 100px;
+  .cloud2 {
+    width: 200px;
+    height: 100px;
   }
-  .main-content-sub {
-    font-size: 20px;
+  .cloud3 {
+    width: 250px;
+    height: 150px;
   }
 }
 
 @media (min-width: 1200px) {
-  .main-title {
-    margin-bottom: 150px;
+  .about {
+    overflow: visible;
+  }
+  .about-title__img img {
+    width: 600px;
+    height: 700px;
+  }
+  .about-title__text {
+    width: 100%;
+    font-size: 3rem;
+  }
+  .about-content__element {
+    width: 40%;
+  }
+  .about-content__element-one {
+    right: 0%;
+  }
+
+  .about-content__element-two {
+    left: 0%;
+  }
+  .about-content__element-three {
+    right: 0%;
+  }
+  .about-content__element-four {
+    left: 0%;
+  }
+  .zip__element {
+    position: sticky;
+    top: 50%;
+  }
+  .about-zip {
+    top: 40%;
+    bottom: 0%;
+  }
+  .cloud1 {
+    width: 350px;
+    height: 200px;
+  }
+  .cloud2 {
+    width: 250px;
+    height: 150px;
+  }
+  .cloud3 {
+    width: 300px;
+    height: 150px;
   }
 }
 
-@media (min-width: 1400px) {
-} */
+@media (min-width: 1600px) {
+  .zip__element {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    position: sticky;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .about-content__element p {
+    font-size: 1.4rem;
+  }
+  .about-content__element {
+    width: 30%;
+  }
+  .about-title__text {
+    width: 80%;
+    font-size: 4rem;
+  }
+  .about-title__img img {
+    width: 600px;
+    height: 700px;
+  }
+  .about-content__element-oneImg img {
+    display: block;
+  }
+  .cloud1 {
+    width: 350px;
+    height: 200px;
+  }
+  .cloud2 {
+    width: 250px;
+    height: 150px;
+  }
+  .cloud3 {
+    width: 300px;
+    height: 150px;
+  }
+}

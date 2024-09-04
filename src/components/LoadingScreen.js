@@ -5,7 +5,7 @@ function LoadingScreen({ loading }) {
   const [hide, setHide] = useState(false);
 
   useEffect(() => {
-    if (!loading) {
+    if (loading) {
       setTimeout(() => {
         setHide(true);
       }, 600); // Czas trwania animacji

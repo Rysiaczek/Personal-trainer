@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import { Kettel } from "./kettel";
@@ -12,7 +13,7 @@ function About() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const maxScroll = document.body.scrollHeight - window.innerHeight;
-      const rotationValue = (scrollY / maxScroll) * Math.PI * 2;
+      const rotationValue = (scrollY / maxScroll) * Math.PI * 6;
 
       setRotation(rotationValue);
     };
@@ -20,13 +21,50 @@ function About() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  console.log(rotation);
   return (
     <div className="about position-relative z-2" id="About">
+      <div className="about-title">
+        <div>
+          <div className="marque-clouds">
+            <Marquee speed={120} className="mt-5 mb-3 ">
+              <img
+                src={process.env.PUBLIC_URL + "/img/cloud1.png"}
+                alt=""
+                className="cloud1"
+              />
+            </Marquee>
+            <Marquee speed={160} className="mt-3 mb-3 ">
+              <img
+                src={process.env.PUBLIC_URL + "/img/cloud1.png"}
+                alt=""
+                className="cloud2"
+              />
+            </Marquee>
+            <Marquee speed={130} className="mt-5 ">
+              <img
+                src={process.env.PUBLIC_URL + "/img/cloud1.png"}
+                alt=""
+                className="cloud3"
+              />
+            </Marquee>
+            <div className="marque-bg"></div>
+          </div>
+        </div>
+        <div className="about-title__img">
+          <img src={process.env.PUBLIC_URL + "/img/prof.jpg"} alt="" />
+        </div>
+        <div className="about-title__text">
+          <p>
+            Twoje zdrowie i dobre samopoczucie są najważniejsze, a ja pokażę Ci
+            jak osiągnąć swoje cele.
+          </p>
+        </div>
+      </div>
       <div className="about-zip ">
         <div className="zip__element">
           <Canvas>
-            <ambientLight intensity={1} />
+            <ambientLight intensity={0.6} />
+            <directionalLight color="white" position={[3, 5, 5]} />
             <pointLight position={[10, 10, 10]} />
             <PerspectiveCamera makeDefault position={[0, 0.2, 7]} />
             <Kettel
@@ -38,6 +76,9 @@ function About() {
         </div>
       </div>
       <div className="about-content">
+        <div className="about-content__element about-content__element-oneImg">
+          <img src={process.env.PUBLIC_URL + "/img/aboutPhoto1.jpg"} alt="" />
+        </div>
         <div className="about-content__element about-content__element-one">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
@@ -71,49 +112,19 @@ function About() {
             unde velit reprehenderit eum atque veritatis!
           </p>
         </div>
+        <div className="about-content__element about-content__element-four">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            pariatur incidunt facilis omnis harum quas, illo nesciunt
+            repellendus aut ullam, provident, iste perspiciatis id. Error rem
+            ullam amet sint repudiandae! Animi sunt, eaque nostrum ab autem
+            corrupti delectus? Consequatur aliquam dolor laborum dicta quae nisi
+            dolore beatae vero ratione ipsam sapiente et, necessitatibus aut
+            unde velit reprehenderit eum atque veritatis!
+          </p>
+        </div>
       </div>
     </div>
   );
 }
 export default About;
-// function About() {
-//   return (
-//     <div className="main position-relative z-3" id="About">
-//       <div className="container-fluid  pt-5">
-//         <div className="row justify-content-center">
-//           <p className=" main-title col-12 display-1 text-center pt-5 text-light">
-//             Twoj cel to moja misja
-//           </p>
-//           <img
-//             src={process.env.PUBLIC_URL + "/img/prof.jpg"}
-//             alt=""
-//             className="col-12 col-lg-5 me-0 me-lg-5"
-//             style={{ height: "550px", width: "500px" }}
-//           />
-//           <div className="col-12 col-lg-8 ms-0 ms-md-5">
-//             <div className="row ms-auto main-content justify-content-center">
-//               <p className="text-light col-10 main-content-first">
-//                 AAALorem ipsum, dolor sit amet consectetur adipisicing elit.
-//                 Fugiat nam eligendi nostrum delectus enim. Aperiam voluptatum,
-//                 eaque et animi eos quae explicabo, pariatur molestiae cupiditate
-//                 placeat, harum incidunt illo? Tempore.
-//               </p>
-//               <p className="text-light col-6 col-lg-5 pe-0 pe-lg-0 main-content-sub">
-//                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-//                 Delectus at a reprehenderit et! Vitae corporis a natus minima
-//                 eum amet, vel obcaecati quos molestias dolore. Tenetur
-//                 exercitationem laboriosam quaerat at.
-//               </p>
-//               <p className="text-light col-6 col-lg-5 ps-0 ps-sm-5 main-content-sub">
-//                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-//                 Recusandae esse ducimus maiores, in nostrum ratione ex minima
-//                 asperiores quisquam quam at voluptatum enim error a inventore
-//                 dicta! Iusto, id officia?
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
