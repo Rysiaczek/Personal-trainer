@@ -47,7 +47,6 @@ function About() {
                 className="cloud3"
               />
             </Marquee>
-            <div className="marque-bg"></div>
           </div>
         </div>
         <div className="about-title__img">

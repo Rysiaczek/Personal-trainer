@@ -8,6 +8,10 @@
 .header-content-title p {
   font-size: 42px;
 }
+.header-content-title p,
+span {
+  font-family: "Toyota MR2", sans-serif;
+}
 
 #myVideo {
   width: 100vw;

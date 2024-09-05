@@ -1,19 +1,105 @@
-.nav {
-  transition: all 0.5s;
+nav {
+  position: fixed;
+  top: 20px;
+  z-index: 5;
+  width: 100%;
 }
-.nav-link {
-  font-size: 1.6rem;
+.nav-container {
+  margin: 0 auto;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: relative;
 }
-.navbar-brand {
-  font-size: 2.5rem;
-  font-weight: bold;
+.nav-container p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-nav hr {
-  height: 10px;
-  background-color: white;
-  border-radius: 20px;
-  width: 20%;
-  margin: 0 50%;
-  transform: translateX(-50%);
+.nav__main a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 20px;
+}
+.nav-menu__button {
+  overflow: hidden;
+  border: 1px solid #fff;
+  background-color: #333;
+  padding: 5px 20px;
+  box-shadow: 2px 2px 2px white;
+  position: relative;
+  z-index: 3;
+}
+.nav-menu__button::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(163, 218, 13);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.nav-menu__button:hover::before {
+  top: 0;
+}
+
+.nav-menu__activeElement {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: -20px;
+  width: 30%;
+  height: 700%;
+}
+.nav-activeElement__container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px 0px 0px 50px;
+}
+
+.nav-menu__circleElement {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -20px;
+  background-color: rgb(163, 218, 13);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.nav-menu-items {
+  margin-left: 100px;
+  margin-top: 150px;
+  color: #fff;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.nav-menu-items a {
+  margin: 10px 0;
+  padding-right: 40px;
+  font-size: 3rem;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu-items {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
