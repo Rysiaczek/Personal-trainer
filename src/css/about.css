@@ -127,6 +127,10 @@
     width: 250px;
     height: 150px;
   }
+  .about-zip {
+    top: 35%;
+    bottom: 0%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -162,7 +166,7 @@
     top: 50%;
   }
   .about-zip {
-    top: 40%;
+    top: 50%;
     bottom: 0%;
   }
   .cloud1 {

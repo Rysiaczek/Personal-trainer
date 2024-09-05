@@ -6,8 +6,17 @@ import "../css/nav.css";
 function NavBarr() {
   const [isActive, setIsActive] = useState(false);
 
+  const activeScene = () => {
+    if (!isActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  };
+
   const handleMenuClick = () => {
     setIsActive(!isActive);
+    activeScene();
   };
 
   return (

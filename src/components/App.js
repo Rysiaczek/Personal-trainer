@@ -38,7 +38,7 @@ function App() {
     return <LoadingScreen loading={isLoading} />;
   }
   return (
-    <div>
+    <div className="appDiv">
       <NavBarr />
       <Header />
       <About />
