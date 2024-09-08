@@ -53,13 +53,11 @@ nav {
 }
 
 .nav-menu__activeElement {
-  display: block;
   z-index: 1;
   position: absolute;
   right: 0;
   top: -20px;
   width: 100%;
-
   height: 700%;
 }
 .nav-activeElement__container {

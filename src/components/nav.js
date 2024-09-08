@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import "../css/nav.css";
 
 function NavBarr() {
   const [isActive, setIsActive] = useState(false);
-  const [scale, setScale] = useState(0);
+  const [scale, setScale] = useState(1);
+  const [shouldHide, setShouldHide] = useState(false);
 
   const activeScene = () => {
     if (!isActive) {
@@ -16,11 +17,29 @@ function NavBarr() {
   };
 
   const handleMenuClick = () => {
+    console.log();
     const width = window.innerWidth;
-    setScale(width / 100);
+    if (width < 500) {
+      setScale(width / 5);
+    } else if (width < 768) {
+      setScale(width / 30);
+    } else if (width < 1200) {
+      setScale(width / 50);
+    } else setScale(width / 100);
     setIsActive(!isActive);
     activeScene();
   };
+
+  useEffect(() => {
+    if (!isActive) {
+      const timer = setTimeout(() => {
+        setShouldHide(true);
+      }, 820);
+      return () => clearTimeout(timer);
+    } else {
+      setShouldHide(false);
+    }
+  }, [isActive]);
 
   return (
     <nav>
@@ -31,7 +50,9 @@ function NavBarr() {
         <div className="nav-menu__button" onClick={handleMenuClick}>
           <p>menu</p>
         </div>
-        <div className="nav-menu__activeElement">
+        <div
+          className="nav-menu__activeElement"
+          style={{ display: shouldHide ? "none" : "block" }}>
           <div className="nav-activeElement__container">
             <AnimatePresence>
               {isActive && (
