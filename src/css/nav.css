@@ -22,19 +22,19 @@ nav {
 
 .nav__main a {
   text-decoration: none;
-  color: #fff;
   font-size: 1.2rem;
   font-weight: 500;
   margin: 0 20px;
 }
 .nav-menu__button {
   overflow: hidden;
-  border: 1px solid #fff;
-  background-color: #333;
+  border: 1px solid #afd9ad;
+  background-color: #0b1c26;
   padding: 5px 20px;
-  box-shadow: 2px 2px 2px white;
+  box-shadow: 2px 2px 2px #afd9ad;
   position: relative;
   z-index: 3;
+  color: #afd9ad;
 }
 .nav-menu__button::before {
   content: "";
@@ -43,9 +43,12 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(163, 218, 13);
+  background-color: #79f2e6;
   transition: all 0.3s ease;
   z-index: -1;
+}
+.nav-menu__button:hover {
+  color: #0b1c26;
 }
 
 .nav-menu__button:hover::before {
@@ -73,7 +76,7 @@ nav {
   position: absolute;
   right: 0;
   top: -20px;
-  background-color: rgb(153, 204, 12);
+  background-color: #79f2e6;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -82,7 +85,7 @@ nav {
 .nav-menu-items {
   margin-left: 100px;
   margin-top: 150px;
-  color: #fff;
+  color: #0b1c26;
   text-align: right;
   display: flex;
   flex-direction: column;
@@ -94,7 +97,7 @@ nav {
   padding-right: 40px;
   font-size: 3rem;
   text-decoration: none;
-  color: white;
+  color: #0b1c26;
 }
 
 .nav-menu-items {

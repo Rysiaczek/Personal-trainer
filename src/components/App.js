@@ -7,7 +7,6 @@ import Marque from "./marque";
 import About from "./about";
 import NavBarr from "./nav";
 import Offert from "./offert";
-import Secondmain from "./secondmain";
 import LoadingScreen from "./LoadingScreen";
 
 import "../css/App.css";
@@ -33,7 +32,6 @@ function App() {
       <NavBarr />
       <Header />
       <About />
-      <Secondmain />
       <Marque />
       <Offert />
       <Contact />
