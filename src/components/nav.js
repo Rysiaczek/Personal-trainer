@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import "../css/nav.css";
 
 function NavBarr() {
   const [isActive, setIsActive] = useState(false);
+  const [scale, setScale] = useState(0);
 
   const activeScene = () => {
     if (!isActive) {
@@ -15,6 +16,8 @@ function NavBarr() {
   };
 
   const handleMenuClick = () => {
+    const width = window.innerWidth;
+    setScale(width / 100);
     setIsActive(!isActive);
     activeScene();
   };
@@ -35,10 +38,10 @@ function NavBarr() {
                 <motion.div
                   className="nav-menu__circleElement"
                   initial={{ scale: 0, top: "-50px", right: "-50px" }}
-                  animate={{ scale: 15 }}
+                  animate={{ scale: scale }}
                   exit={{ scale: 0 }}
                   transition={{
-                    duration: 0.7,
+                    duration: 0.8,
                     ease: "easeInOut",
                   }}></motion.div>
               )}

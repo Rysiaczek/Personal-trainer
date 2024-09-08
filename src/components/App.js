@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import Contact from "./contact";
 import Header from "./header";
@@ -14,38 +14,22 @@ import "../css/App.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isDelayOver, setIsDelayOver] = useState(false);
 
-  useEffect(() => {
-    const handlePageLoad = () => {
+  const handlePageLoad = () => {
+    setTimeout(() => {
       setIsLoading(false);
-    };
+    }, 1000);
+  };
 
-    if (document.readyState === "complete") {
-      handlePageLoad();
-    } else {
-      window.addEventListener("load", handlePageLoad);
-    }
-
-    return () => {
-      window.removeEventListener("load", handlePageLoad);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isLoading) {
-      const delayTimeout = setTimeout(() => {
-        setIsDelayOver(true);
-      }, 2000);
-      return () => clearTimeout(delayTimeout);
-    }
-  }, [isLoading]);
-
-  if (isLoading || !isDelayOver) {
-    return <LoadingScreen loading={isLoading} />;
+  if (document.readyState === "complete") {
+    handlePageLoad();
+  } else {
+    window.addEventListener("load", handlePageLoad);
   }
+
   return (
     <div>
+      <LoadingScreen loading={isLoading} />
       <NavBarr />
       <Header />
       <About />

@@ -1,66 +1,87 @@
 import "../css/contact.css";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 function Contact() {
-  const [contactHeight, setContactHeight] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const contactX = document
-        .querySelector(".contact")
-        .getBoundingClientRect();
-      let Scroll = window.scrollY;
-      setContactHeight(Scroll > contactX.height ? true : false);
-    });
-  }, []);
-
   return (
     <div className="contact" id="Contact">
       <div className="contact__fixed z-0">
+        <div className="contact__title">
+          <p className="display-2 mt-5">Masz jakieś pytanie? zadaj je </p>
+        </div>
         <div className="container  contact-body">
           <div className="w-100">
-            <div class="row ">
-              <div class="col ">
+            <div className="row ">
+              <div className="col-5">
+                <label htmlFor="FirstNameInput">Imię</label>
                 <input
                   type="text"
-                  class="form-control"
-                  placeholder="First name"
+                  className="form-control rounded-0"
                   aria-label="First name"
+                  id="FirstNameInput"
                 />
               </div>
-              <div class="col  pe-0">
+              <div className="col-5  ps-0 ms-auto">
+                <label htmlFor="LastNameInput">Nazwisko</label>
                 <input
                   type="text"
-                  class="form-control"
-                  placeholder="Last name"
+                  className="form-control rounded-0"
                   aria-label="Last name"
+                  id="LastNameInput"
                 />
               </div>
             </div>
+            <div className="row">
+              <div className="mb-3 col-5">
+                <label htmlFor="exampleFormControlInput1" className="mt-3 mb-2">
+                  Adres Email
+                </label>
+                <input
+                  type="email"
+                  className="col-12"
+                  id="exampleFormControlInput1"></input>
+              </div>
+              <div className="mb-3 col-5 ms-auto ps-0">
+                <label htmlFor="exampleFormControlInput1" className="mt-3 mb-2">
+                  Telefon
+                </label>
+                <input
+                  type="email"
+                  className="col-12"
+                  id="exampleFormControlInput1"></input>
+              </div>
+            </div>
             <div className="mb-3">
-              <label for="exampleFormControlInput1" className="form-label">
-                Email address
+              <label
+                htmlFor="exampleFormControlTextarea1"
+                className="form-label">
+                Wiadomość
               </label>
               <input
-                type="email"
-                className="form-control"
-                id="exampleFormControlInput1"
-                placeholder="name@example.com"></input>
-            </div>
-            <div className="mb-3">
-              <label for="exampleFormControlTextarea1" className="form-label">
-                Example textarea
-              </label>
-              <textarea
-                className="form-control"
+                className="form-control rounded-0"
                 id="exampleFormControlTextarea1"
-                rows="3"></textarea>
+                rows="3"></input>
             </div>
           </div>
-          <button type="button" class="btn btn-outline-secondary mt-3 ">
+          <button type="button" className="btn btn-outline-secondary ">
             Wyślij
           </button>
+        </div>
+        <div className="contact__footer">
+          <div>
+            <p>&copy;Konrad Oleszczuk / Wszelkie prawa zastrzeżone</p>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/kon_r6_ad/">instagram</a>
+            <a
+              className="ms-3"
+              href="https://www.facebook.com/konrad.oleszczuk.3?locale=pl_PL">
+              Facebook
+            </a>
+          </div>
+          <div>
+            <a href="#">made by EriNext</a>
+          </div>
         </div>
       </div>
     </div>

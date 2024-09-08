@@ -45,11 +45,13 @@ span {
   rotate: 90deg;
   text-align: right;
   width: 50%;
+  height: 2px;
   position: absolute;
-  transform: translateX(20%);
+  left: 0;
   animation: scrollAnimation 1.5s linear infinite;
   animation-delay: 7s;
   opacity: 0;
+  background-color: white;
 }
 @keyframes scrollAnimation {
   0% {

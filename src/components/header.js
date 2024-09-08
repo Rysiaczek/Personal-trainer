@@ -73,7 +73,7 @@ function Header() {
                 <p
                   className="text-light overflow-hidden align-self-center"
                   onClick={() => handleScroll()}>
-                  <hr className="border-light border-3 scroll-hr" />
+                  <span className="border-light border-3 scroll-hr"></span>
                   scroll
                 </p>
               </div>

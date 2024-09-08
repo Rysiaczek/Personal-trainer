@@ -8,7 +8,7 @@ function LoadingScreen({ loading }) {
     if (loading) {
       setTimeout(() => {
         setHide(true);
-      }, 3000); // Czas trwania animacji
+      }, 1000);
     }
   }, [loading]);
   return <div className={`loadingscreen ${hide ? " hide" : ""}`}></div>;
