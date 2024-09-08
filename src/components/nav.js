@@ -94,7 +94,7 @@ function NavBarr() {
                     whileHover={{ color: "#333" }}
                     transition={{ duration: 0.5 }}
                     href="Contact">
-                    Contant
+                    Kontakt
                   </motion.a>
                 </motion.div>
               )}
