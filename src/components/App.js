@@ -14,31 +14,38 @@ import "../css/App.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isDelayOver, setIsDelayOver] = useState(false);
 
   useEffect(() => {
-    // Listener do wykrycia pełnego załadowania strony
     const handlePageLoad = () => {
-      setIsLoading(false); // Ustawia stan na false, gdy strona jest załadowana
+      setIsLoading(false);
     };
 
-    // Sprawdzaj, czy strona jest już załadowana (na wypadek, gdyby efekt uruchomił się po załadowaniu)
     if (document.readyState === "complete") {
       handlePageLoad();
     } else {
       window.addEventListener("load", handlePageLoad);
     }
 
-    // Usuń listener przy odmontowywaniu komponentu
     return () => {
       window.removeEventListener("load", handlePageLoad);
     };
   }, []);
 
-  if (isLoading) {
+  useEffect(() => {
+    if (!isLoading) {
+      const delayTimeout = setTimeout(() => {
+        setIsDelayOver(true);
+      }, 2000);
+      return () => clearTimeout(delayTimeout);
+    }
+  }, [isLoading]);
+
+  if (isLoading || !isDelayOver) {
     return <LoadingScreen loading={isLoading} />;
   }
   return (
-    <div className="appDiv">
+    <div>
       <NavBarr />
       <Header />
       <About />

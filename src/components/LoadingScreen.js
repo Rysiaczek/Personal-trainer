@@ -8,15 +8,10 @@ function LoadingScreen({ loading }) {
     if (loading) {
       setTimeout(() => {
         setHide(true);
-      }, 600); // Czas trwania animacji
+      }, 3000); // Czas trwania animacji
     }
   }, [loading]);
-  return (
-    <div
-      className={`loadingscreen ${hide ? "hide" : ""}`}
-      //   style={props.loading ? { top: "-100%" } : { top: "0" }}>
-    ></div>
-  );
+  return <div className={`loadingscreen ${hide ? " hide" : ""}`}></div>;
 }
 
 export default LoadingScreen;

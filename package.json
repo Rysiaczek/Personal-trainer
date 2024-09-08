@@ -1,7 +1,6 @@
 {
   "name": "personaltrainer",
   "version": "0.1.0",
-  "homepage": "https://rysiaczek.github.io/Personal-trainer",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.112.0",
@@ -23,7 +22,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
