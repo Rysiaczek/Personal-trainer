@@ -15,7 +15,6 @@
   margin-bottom: 10px;
   font-weight: 700;
 }
-
 .item {
   background-color: rgba(0, 0, 0, 0.247);
   color: white;
@@ -25,7 +24,7 @@
   width: 100%;
 }
 .item-body p {
-  border-top: 1px solid #afd9ad;
+  border-top: 1px solid #9fa6a5;
   width: 80%;
   margin-left: 20%;
   font-size: 16px;
@@ -33,7 +32,7 @@
 
 @media (min-width: 500px) {
   .item-body p {
-    border-top: 1px solid rgb(220, 53, 69);
+    border-top: 1px solid #9fa6a5;
     width: 80%;
     margin-left: 20%;
     font-size: 20px;
@@ -45,10 +44,9 @@
     font-weight: 700;
   }
 }
-
 @media (min-width: 600px) {
   .item-body p {
-    border-top: 1px solid rgb(220, 53, 69);
+    border-top: 1px solid #9fa6a5;
     width: 80%;
     margin-left: 20%;
     font-size: 16px;
@@ -60,10 +58,9 @@
     font-weight: 700;
   }
 }
-
 @media (min-width: 800px) {
   .item-body p {
-    border-top: 1px solid rgb(220, 53, 69);
+    border-top: 1px solid #9fa6a5;
     width: 80%;
     margin-left: 20%;
     font-size: 18px;
@@ -76,12 +73,9 @@
   }
 }
 
-@media (min-width: 1200px) {
-}
-
 @media (min-width: 1400px) {
   .item-body p {
-    border-top: 1px solid #afd9ad;
+    border-top: 1px solid #9fa6a5;
     width: 80%;
     margin-left: 20%;
     font-size: 20px;
