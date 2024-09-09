@@ -81,19 +81,19 @@ function NavBarr() {
                   <motion.a
                     whileHover={{ color: "#333" }}
                     transition={{ duration: 0.5 }}
-                    href="Home">
+                    href="#Home">
                     Home
                   </motion.a>
                   <motion.a
                     whileHover={{ color: "#333" }}
                     transition={{ duration: 0.5 }}
-                    href="About">
+                    href="#About">
                     O nas
                   </motion.a>
                   <motion.a
                     whileHover={{ color: "#333" }}
                     transition={{ duration: 0.5 }}
-                    href="Contact">
+                    href="#contact">
                     Kontakt
                   </motion.a>
                 </motion.div>
