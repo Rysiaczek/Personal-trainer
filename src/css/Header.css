@@ -51,7 +51,7 @@ span {
   animation: scrollAnimation 1.5s linear infinite;
   animation-delay: 7s;
   opacity: 0;
-  background-color: white;
+  background-color: #3d403f;
 }
 @keyframes scrollAnimation {
   0% {

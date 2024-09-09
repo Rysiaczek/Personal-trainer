@@ -1,14 +1,19 @@
 import "../css/contact.css";
-
 import React, { useRef } from "react";
+import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
+  const sendEmail = (data) => {
     emailjs
       .sendForm("service_k28heer", "template_hec8z95", form.current, {
         publicKey: "1xYn4ZEuM6NgAhwfY",
@@ -16,7 +21,7 @@ function Contact() {
       .then(
         () => {
           alert("Wiadomość została wysłana");
-          form.current.reset();
+          reset();
         },
         (error) => {
           alert("Coś poszło nie tak, spróbuj ponownie");
@@ -26,15 +31,15 @@ function Contact() {
 
   return (
     <div className="contact" id="contact">
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={handleSubmit(sendEmail)}>
         <div className="contact__fixed z-0">
           <div className="contact__title">
-            <p className="display-2 mt-5">Masz jakieś pytanie? zadaj je </p>
+            <p className="display-2 mt-5">Masz jakieś pytanie? zadaj je</p>
           </div>
 
-          <div className="container  contact-body">
+          <div className="container contact-body">
             <div className="w-100">
-              <div className="row ">
+              <div className="row">
                 <div className="col-5">
                   <label htmlFor="FirstNameInput">Imię</label>
                   <input
@@ -42,65 +47,112 @@ function Contact() {
                     className="form-control rounded-0"
                     aria-label="First name"
                     id="FirstNameInput"
-                    name="user_name"
+                    {...register("user_name", {
+                      required: "Imię jest wymagane",
+                      minLength: {
+                        value: 2,
+                        message: "Imię musi zawierać co najmniej 2 znaki",
+                      },
+                    })}
                   />
+                  {errors.user_name && (
+                    <p className="error-message">{errors.user_name.message}</p>
+                  )}
                 </div>
-                <div className="col-5  ps-0 ms-auto">
+
+                <div className="col-5 ps-0 ms-auto">
                   <label htmlFor="LastNameInput">Nazwisko</label>
                   <input
                     type="text"
                     className="form-control rounded-0"
                     aria-label="Last name"
                     id="LastNameInput"
-                    name="user_surname"
+                    {...register("user_surname", {
+                      required: "Nazwisko jest wymagane",
+                      minLength: {
+                        value: 2,
+                        message: "Nazwisko musi zawierać co najmniej 2 znaki",
+                      },
+                    })}
                   />
+                  {errors.user_surname && (
+                    <p className="error-message">
+                      {errors.user_surname.message}
+                    </p>
+                  )}
                 </div>
               </div>
+
               <div className="row">
                 <div className="mb-3 col-5">
-                  <label
-                    htmlFor="exampleFormControlInput1"
-                    className="mt-3 mb-2">
+                  <label htmlFor="email" className="mt-3 mb-2">
                     Adres Email
                   </label>
                   <input
                     type="email"
                     className="col-12"
-                    id="exampleFormControlInput1"
-                    name="user_email"
+                    id="email"
+                    {...register("user_email", {
+                      required: "Email jest wymagany",
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: "Nieprawidłowy adres email",
+                      },
+                    })}
                   />
+                  {errors.user_email && (
+                    <p className="error-message">{errors.user_email.message}</p>
+                  )}
                 </div>
+
                 <div className="mb-3 col-5 ms-auto ps-0">
-                  <label
-                    htmlFor="exampleFormControlInput1"
-                    className="mt-3 mb-2">
+                  <label htmlFor="phone" className="mt-3 mb-2">
                     Telefon
                   </label>
                   <input
                     type="tel"
                     className="col-12"
-                    id="exampleFormControlInput1"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
-                    name="user_phone"
+                    id="phone"
+                    {...register("user_phone", {
+                      required: "Telefon jest wymagany",
+                      pattern: {
+                        value: /^[0-9]{9,}$/,
+                        message:
+                          "Numer telefonu musi zawierać co najmniej 9 cyfr",
+                      },
+                    })}
                   />
+                  {errors.user_phone && (
+                    <p className="error-message">{errors.user_phone.message}</p>
+                  )}
                 </div>
               </div>
+
               <div className="mb-3">
-                <label
-                  htmlFor="exampleFormControlTextarea1"
-                  className="form-label">
+                <label htmlFor="message" className="form-label">
                   Wiadomość
                 </label>
                 <input
                   className="form-control rounded-0"
-                  id="exampleFormControlTextarea1"
-                  name="message"
+                  id="message"
+                  rows="4"
+                  {...register("message", {
+                    required: "Wiadomość jest wymagana",
+                    minLength: {
+                      value: 10,
+                      message: "Wiadomość musi zawierać co najmniej 10 znaków",
+                    },
+                  })}
                 />
+                {errors.message && (
+                  <p className="error-message">{errors.message.message}</p>
+                )}
               </div>
             </div>
+
             <input
               type="submit"
-              className="btn btn-outline-secondary"
+              className="btn btn-outline-secondary button mt-4"
               value={"Wyślij"}
             />
           </div>

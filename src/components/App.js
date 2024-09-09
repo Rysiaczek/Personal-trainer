@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import Contact from "./contact";
 import Header from "./header";
@@ -13,18 +13,33 @@ import "../css/App.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const videoRef = useRef(null);
 
   const handlePageLoad = () => {
-    setTimeout(() => {
+    if (videoRef.current) {
+      const video = videoRef.current;
+
+      video.addEventListener("loadeddata", () => {
+        setIsLoading(false);
+      });
+
+      if (video.readyState >= 3) {
+        setIsLoading(false);
+      }
+    } else {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
-  if (document.readyState === "complete") {
-    handlePageLoad();
-  } else {
-    window.addEventListener("load", handlePageLoad);
-  }
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      handlePageLoad();
+    } else {
+      window.addEventListener("load", handlePageLoad);
+    }
+
+    return () => window.removeEventListener("load", handlePageLoad);
+  }, []);
 
   return (
     <div>

@@ -1,7 +1,7 @@
 import "../css/Header.css";
 import React, { useEffect, useState } from "react";
 
-function Header() {
+function Header({ videoRef }) {
   const [height, setHeight] = useState(false);
 
   const handleScroll = () => {
@@ -83,7 +83,7 @@ function Header() {
         <div
           className="bg-video"
           style={height ? { display: "none" } : { display: "block" }}>
-          <video autoPlay muted loop playsInline id="myVideo">
+          <video autoPlay muted loop playsInline id="myVideo" ref={videoRef}>
             <source
               src={process.env.PUBLIC_URL + "/img/header-bg.mp4"}
               type="video/mp4"

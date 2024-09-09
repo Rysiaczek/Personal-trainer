@@ -7,7 +7,7 @@
   bottom: 0;
   height: 100%;
   width: 100%;
-  background-color: #63caf2;
+  background-color: #d7d9d7;
   padding-top: 10vh;
 
   display: flex;
@@ -30,7 +30,7 @@
 .contact-body input {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #3d403f;
   transition: ease-in-out 0.3s;
 }
 .contact-body input:focus {
@@ -43,32 +43,35 @@
   background-color: transparent;
   outline: none;
   box-shadow: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #9fa6a5;
 }
 .contact-body input::ac {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #3d403f;
 }
-.contact-body button {
+.contact-body .button {
+  box-sizing: border-box;
   padding: 10px 20px;
   margin-top: 20px;
-  border-color: #333;
   color: #333;
   font-size: 1.3rem;
   font-weight: 500;
   transition: ease-in-out 0.3s;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #3d403f;
 }
 
-.contact-body button:hover {
-  background-color: #333;
-  color: white;
+.contact-body .button:hover {
+  background-color: #3d403f;
+  color: #d7d9d7;
 }
 
 .contact__title p {
   font-weight: 700;
   text-transform: uppercase;
-  color: #333;
+  color: #3d403f;
 }
 .contact__footer {
   padding: 0 50px;
@@ -78,7 +81,15 @@
   text-transform: uppercase;
 }
 .contact__footer a {
-  color: #333;
+  color: #3d403f;
   text-decoration: none;
   padding: 5px 10px;
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+input:-internal-autofill-selected {
+  background-color: transparent !important;
 }

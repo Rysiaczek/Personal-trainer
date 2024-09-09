@@ -28,13 +28,13 @@ nav {
 }
 .nav-menu__button {
   overflow: hidden;
-  border: 1px solid #afd9ad;
-  background-color: #0b1c26;
+  border: 1px solid #d7d9d7;
+  background-color: #3d403f;
   padding: 5px 20px;
-  box-shadow: 2px 2px 2px #afd9ad;
+  box-shadow: 2px 2px 2px #d7d9d7;
   position: relative;
   z-index: 3;
-  color: #afd9ad;
+  color: #d7d9d7;
 }
 .nav-menu__button::before {
   content: "";
@@ -43,12 +43,12 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #79f2e6;
+  background-color: #d7d9d7;
   transition: all 0.3s ease;
   z-index: -1;
 }
 .nav-menu__button:hover {
-  color: #0b1c26;
+  color: #3d403f;
 }
 
 .nav-menu__button:hover::before {
@@ -76,7 +76,7 @@ nav {
   position: absolute;
   right: 0;
   top: -20px;
-  background-color: #79f2e6;
+  background-color: #f0f2f0;
   width: 100px;
   height: 100px;
   border-radius: 50%;

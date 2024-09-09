@@ -16,6 +16,7 @@
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
+    "react-hook-form": "^7.53.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
     "three": "^0.168.0",
