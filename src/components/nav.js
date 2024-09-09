@@ -16,6 +16,17 @@ function NavBarr() {
     }
   };
 
+  const handleScroll = (e) => {
+    const element = e.target.getAttribute("data-link");
+    const scrollToElement = document.querySelector(`.${element}`);
+    scrollToElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+    setIsActive(false);
+    activeScene();
+  };
+
   const handleMenuClick = () => {
     console.log();
     const width = window.innerWidth;
@@ -78,24 +89,27 @@ function NavBarr() {
                     transition: { delay: 0.7, duration: 0.5 },
                   }}
                   exit={{ opacity: 0, transition: { duration: 0.1 } }}>
-                  <motion.a
-                    whileHover={{ color: "#333" }}
-                    transition={{ duration: 0.5 }}
-                    href="#Home">
+                  <motion.p
+                    onClick={handleScroll}
+                    data-link="header"
+                    whileHover={{ color: "#9FA6A5" }}
+                    transition={{ duration: 0.5 }}>
                     Home
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ color: "#333" }}
-                    transition={{ duration: 0.5 }}
-                    href="#About">
+                  </motion.p>
+                  <motion.p
+                    onClick={handleScroll}
+                    data-link="about"
+                    whileHover={{ color: "#9FA6A5" }}
+                    transition={{ duration: 0.5 }}>
                     O nas
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ color: "#333" }}
-                    transition={{ duration: 0.5 }}
-                    href="#contact">
+                  </motion.p>
+                  <motion.p
+                    onClick={handleScroll}
+                    data-link="offert"
+                    whileHover={{ color: "#9FA6A5" }}
+                    transition={{ duration: 0.5 }}>
                     Kontakt
-                  </motion.a>
+                  </motion.p>
                 </motion.div>
               )}
             </AnimatePresence>

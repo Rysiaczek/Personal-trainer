@@ -22,12 +22,6 @@ nav {
   font-weight: 700;
 }
 
-.nav__main a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 0 20px;
-}
 .nav-menu__button {
   overflow: hidden;
   border: 1px solid #d7d9d7;
@@ -94,9 +88,9 @@ nav {
   text-align: left;
 }
 
-.nav-menu-items a {
+.nav-menu-items p {
   margin: 10px 0;
-  padding-right: 40px;
+  padding-right: 0px;
   font-size: 3rem;
   text-decoration: none;
   color: #0b1c26;
@@ -124,6 +118,14 @@ nav {
   .nav-container p {
     margin-right: 0px;
     font-size: 1.5rem;
+  }
+  .nav-container {
+    margin-top: -10px;
+  }
+  .nav-menu-items p {
+    margin: 10px 0;
+    padding-right: 40px;
+    font-size: 3rem;
   }
 }
 

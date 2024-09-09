@@ -34,7 +34,9 @@ function Contact() {
       <form ref={form} onSubmit={handleSubmit(sendEmail)}>
         <div className="contact__fixed z-0">
           <div className="contact__title">
-            <p className="display-2">Masz jakieś pytanie? zadaj je</p>
+            <p className="display-5 display-lg-2 ">
+              Masz jakieś pytanie? zadaj je
+            </p>
           </div>
 
           <div className="container contact-body">
