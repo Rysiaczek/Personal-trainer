@@ -34,13 +34,13 @@ function Contact() {
       <form ref={form} onSubmit={handleSubmit(sendEmail)}>
         <div className="contact__fixed z-0">
           <div className="contact__title">
-            <p className="display-2 mt-5">Masz jakieś pytanie? zadaj je</p>
+            <p className="display-2">Masz jakieś pytanie? zadaj je</p>
           </div>
 
           <div className="container contact-body">
             <div className="w-100">
-              <div className="row">
-                <div className="col-5">
+              <div className="row row-cols-1 row-cols-lg-2">
+                <div className="col">
                   <label htmlFor="FirstNameInput">Imię</label>
                   <input
                     type="text"
@@ -59,8 +59,7 @@ function Contact() {
                     <p className="error-message">{errors.user_name.message}</p>
                   )}
                 </div>
-
-                <div className="col-5 ps-0 ms-auto">
+                <div className="col ms-auto mt-3 mt-lg-0">
                   <label htmlFor="LastNameInput">Nazwisko</label>
                   <input
                     type="text"
@@ -83,14 +82,14 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="row">
-                <div className="mb-3 col-5">
-                  <label htmlFor="email" className="mt-3 mb-2">
+              <div className="row row-cols-1 row-cols-lg-2">
+                <div className="col mt-3">
+                  <label htmlFor="email" className="">
                     Adres Email
                   </label>
                   <input
                     type="email"
-                    className="col-12"
+                    className="form-control  rounded-0"
                     id="email"
                     {...register("user_email", {
                       required: "Email jest wymagany",
@@ -105,13 +104,13 @@ function Contact() {
                   )}
                 </div>
 
-                <div className="mb-3 col-5 ms-auto ps-0">
-                  <label htmlFor="phone" className="mt-3 mb-2">
+                <div className="col ms-auto mt-3">
+                  <label htmlFor="phone" className="">
                     Telefon
                   </label>
                   <input
                     type="tel"
-                    className="col-12"
+                    className="form-control rounded-0"
                     id="phone"
                     {...register("user_phone", {
                       required: "Telefon jest wymagany",
@@ -128,14 +127,13 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="mb-3">
+              <div className="mb-0 mb-lg-3 mt-3">
                 <label htmlFor="message" className="form-label">
                   Wiadomość
                 </label>
                 <input
                   className="form-control rounded-0"
                   id="message"
-                  rows="4"
                   {...register("message", {
                     required: "Wiadomość jest wymagana",
                     minLength: {
@@ -152,7 +150,7 @@ function Contact() {
 
             <input
               type="submit"
-              className="btn btn-outline-secondary button mt-4"
+              className="btn btn-outline-secondary button mt-4 mb-5 mb-lg-0"
               value={"Wyślij"}
             />
           </div>
@@ -161,7 +159,7 @@ function Contact() {
             <div>
               <p>&copy;Konrad Oleszczuk / Wszelkie prawa zastrzeżone</p>
             </div>
-            <div>
+            <div className="contact__footer-links">
               <a
                 href="https://www.instagram.com/kon_r6_ad/"
                 target="_blank"
@@ -169,7 +167,7 @@ function Contact() {
                 instagram
               </a>
               <a
-                className="ms-3"
+                className="ms-lg-3"
                 href="https://www.facebook.com/konrad.oleszczuk.3?locale=pl_PL"
                 target="_blank"
                 rel="noreferrer">
