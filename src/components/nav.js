@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import "../css/nav.css";
@@ -18,11 +18,18 @@ function NavBarr() {
 
   const handleScroll = (e) => {
     const element = e.target.getAttribute("data-link");
+    let elementY = element.scrollY;
+    let docHeight = document.documentElement.scrollHeight;
     const scrollToElement = document.querySelector(`.${element}`);
-    scrollToElement.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    if (element === "contact") {
+      window.scrollTo(0, docHeight);
+    } else {
+      console.log(elementY);
+      scrollToElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
     setIsActive(false);
     activeScene();
   };
@@ -105,7 +112,7 @@ function NavBarr() {
                   </motion.p>
                   <motion.p
                     onClick={handleScroll}
-                    data-link="offert"
+                    data-link="contact"
                     whileHover={{ color: "#9FA6A5" }}
                     transition={{ duration: 0.5 }}>
                     Kontakt

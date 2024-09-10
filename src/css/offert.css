@@ -9,12 +9,14 @@
   margin: 0 auto;
   height: 60vh;
 }
+
 .title {
   color: white;
   font-size: 20px;
   margin-bottom: 10px;
   font-weight: 700;
 }
+
 .item {
   background-color: rgba(0, 0, 0, 0.247);
   color: white;
@@ -23,6 +25,7 @@
   scale: 0.9;
   width: 100%;
 }
+
 .item-body p {
   border-top: 1px solid #9fa6a5;
   width: 80%;
