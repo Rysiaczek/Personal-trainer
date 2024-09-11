@@ -63,7 +63,10 @@ function NavBarr() {
     <nav>
       <div className="nav-container">
         <div className="nav__title">
-          <p>Power On Gym</p>
+          <p style={{ lineHeight: "1" }}>
+            Konrad <br />
+            Oleszczuk
+          </p>
         </div>
         <div className="nav-menu__button" onClick={handleMenuClick}>
           <p>menu</p>
