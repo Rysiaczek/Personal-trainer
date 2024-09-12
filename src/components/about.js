@@ -52,7 +52,7 @@ function About() {
         <div className="about-title__img">
           <img src={process.env.PUBLIC_URL + "/img/prof.jpg"} alt="" />
         </div>
-        <div className="about-title__text">
+        <div className="about-title__text mt-5">
           <p>
             Twoje zdrowie i dobre samopoczucie są najważniejsze, a ja pokażę Ci
             jak osiągnąć swoje cele.
