@@ -30,6 +30,7 @@ function App() {
       setIsLoading(false);
     }
   };
+  
 
   useEffect(() => {
     if (document.readyState === "complete") {
