@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
-import { Kettel } from "./kettel";
+import { Model } from "./BlackModel";
 
 import "../css/about.css";
 
@@ -66,7 +66,7 @@ function About() {
             <directionalLight color="white" position={[3, 5, 5]} />
             <pointLight position={[10, 10, 10]} />
             <PerspectiveCamera makeDefault position={[0, 0.2, 7]} />
-            <Kettel
+            <Model
               position={[0, -0.5, 2]}
               scale={[0.8, 0.8, 0.8]}
               rotation={[0, rotation, 0]}
