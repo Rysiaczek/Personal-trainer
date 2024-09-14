@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import Marquee from "react-fast-marquee";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import { Model } from "./BlackModel";
@@ -13,6 +12,7 @@ function About() {
   const elementTwoRef = useRef(null);
   const elementThreeRef = useRef(null);
   const elementFourRef = useRef(null);
+  const elementimgRef = useRef(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -23,18 +23,18 @@ function About() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("slide-in");
-        } else {
-          entry.target.classList.remove("slide-in");
         }
       });
     }, observerOptions);
 
+    observer.observe(elementimgRef.current);
     observer.observe(elementOneRef.current);
     observer.observe(elementTwoRef.current);
     observer.observe(elementThreeRef.current);
     observer.observe(elementFourRef.current);
 
     return () => {
+      if (elementOneRef.current) observer.unobserve(elementimgRef.current);
       if (elementOneRef.current) observer.unobserve(elementOneRef.current);
       if (elementTwoRef.current) observer.unobserve(elementTwoRef.current);
       if (elementThreeRef.current) observer.unobserve(elementThreeRef.current);
@@ -83,7 +83,9 @@ function About() {
         </div>
       </div>
       <div className="about-content">
-        <div className="about-content__element about-content__element-oneImg">
+        <div
+          className="about-content__element about-content__element-oneImg"
+          ref={elementimgRef}>
           <img src={process.env.PUBLIC_URL + "/img/aboutPhoto1.jpg"} alt="" />
         </div>
         <div
