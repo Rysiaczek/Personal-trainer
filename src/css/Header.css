@@ -22,6 +22,7 @@
   top: 0;
   bottom: 0;
   z-index: 2;
+  background-color: #3d403f;
 }
 
 .header-content-title p span {
@@ -49,7 +50,7 @@
   animation: scrollAnimation 1.5s linear infinite;
   animation-delay: 7s;
   opacity: 0;
-  background-color: #3d403f;
+  background-color: white;
 }
 @keyframes scrollAnimation {
   0% {
@@ -57,6 +58,9 @@
     opacity: 0;
   }
   20% {
+    opacity: 1;
+  }
+  50% {
     opacity: 1;
   }
   100% {

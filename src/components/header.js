@@ -64,10 +64,12 @@ function Header({ videoRef }) {
             <div className="row  justify-content-lg-between">
               <div className="col-0 col-lg-5">
                 <p className="text-light text-left mt-3 mt-lg-0">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Corporis voluptate cupiditate modi labore ad tempora similique
-                  esse repellendus praesentium ipsam eos accusamus sit, ab illum
-                  nisi quidem, nihil facilis. Blanditiis.
+                  Witaj! Nazywam się Konrad Oleszczuk, jestem trenerem
+                  personalnym z pasją do pomagania w osiąganiu celów fitness.
+                  Niezależnie od tego, czy chcesz poprawić formę, zbudować siłę,
+                  czy zredukować wagę, przygotuję dla Ciebie indywidualny plan
+                  treningowy, który pozwoli Ci szybko zobaczyć efekty. Zapraszam
+                  do współpracy!
                 </p>
               </div>
 

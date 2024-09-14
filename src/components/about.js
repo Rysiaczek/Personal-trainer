@@ -24,31 +24,6 @@ function About() {
   return (
     <div className="about position-relative z-2" id="About">
       <div className="about-title">
-        <div>
-          <div className="marque-clouds">
-            <Marquee speed={120} className="mt-5 mb-3 ">
-              <img
-                src={process.env.PUBLIC_URL + "/img/cloud1.png"}
-                alt=""
-                className="cloud1"
-              />
-            </Marquee>
-            <Marquee speed={160} className="mt-3 mb-3 ">
-              <img
-                src={process.env.PUBLIC_URL + "/img/cloud1.png"}
-                alt=""
-                className="cloud2"
-              />
-            </Marquee>
-            <Marquee speed={130} className="mt-5 ">
-              <img
-                src={process.env.PUBLIC_URL + "/img/cloud1.png"}
-                alt=""
-                className="cloud3"
-              />
-            </Marquee>
-          </div>
-        </div>
         <div className="about-title__img">
           <img src={process.env.PUBLIC_URL + "/img/prof.jpg"} alt="" />
         </div>
@@ -80,46 +55,36 @@ function About() {
         </div>
         <div className="about-content__element about-content__element-one">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            pariatur incidunt facilis omnis harum quas, illo nesciunt
-            repellendus aut ullam, provident, iste perspiciatis id. Error rem
-            ullam amet sint repudiandae! Animi sunt, eaque nostrum ab autem
-            corrupti delectus? Consequatur aliquam dolor laborum dicta quae nisi
-            dolore beatae vero ratione ipsam sapiente et, necessitatibus aut
-            unde velit reprehenderit eum atque veritatis!
+            Oferuję profesjonalne treningi personalne, grupowe i firmowe w
+            siłowni Power on Gym w Chojnie, która jest doskonale wyposażona i
+            dostosowana do różnorodnych potrzeb fitnessowych. Nasza oferta
+            obejmuje:
           </p>
         </div>
         <div className="about-content__element about-content__element-two">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            pariatur incidunt facilis omnis harum quas, illo nesciunt
-            repellendus aut ullam, provident, iste perspiciatis id. Error rem
-            ullam amet sint repudiandae! Animi sunt, eaque nostrum ab autem
-            corrupti delectus? Consequatur aliquam dolor laborum dicta quae nisi
-            dolore beatae vero ratione ipsam sapiente et, necessitatibus aut
-            unde velit reprehenderit eum atque veritatis!
+            Treningi personalne – Spersonalizowane sesje treningowe, które są
+            dostosowane do Twoich indywidualnych celów, poziomu zaawansowania
+            oraz preferencji. Naszym celem jest zapewnienie Ci optymalnych
+            rezultatów poprzez dokładne analizowanie Twoich postępów i
+            dostosowywanie planu treningowego do Twoich potrzeb.
           </p>
         </div>
         <div className="about-content__element about-content__element-three">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            pariatur incidunt facilis omnis harum quas, illo nesciunt
-            repellendus aut ullam, provident, iste perspiciatis id. Error rem
-            ullam amet sint repudiandae! Animi sunt, eaque nostrum ab autem
-            corrupti delectus? Consequatur aliquam dolor laborum dicta quae nisi
-            dolore beatae vero ratione ipsam sapiente et, necessitatibus aut
-            unde velit reprehenderit eum atque veritatis!
+            Treningi grupowe – Dynamiczne i motywujące zajęcia prowadzone w
+            grupie, które łączą różnorodne formy ćwiczeń. To doskonała okazja do
+            pracy nad kondycją, siłą i elastycznością w przyjaznej atmosferze, a
+            także możliwość spotkania nowych ludzi o podobnych
+            zainteresowaniach.
           </p>
         </div>
         <div className="about-content__element about-content__element-four">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            pariatur incidunt facilis omnis harum quas, illo nesciunt
-            repellendus aut ullam, provident, iste perspiciatis id. Error rem
-            ullam amet sint repudiandae! Animi sunt, eaque nostrum ab autem
-            corrupti delectus? Consequatur aliquam dolor laborum dicta quae nisi
-            dolore beatae vero ratione ipsam sapiente et, necessitatibus aut
-            unde velit reprehenderit eum atque veritatis!
+            Nasza siłownia w Chojnie to miejsce, gdzie znajdziesz nowoczesny
+            sprzęt, profesjonalną obsługę oraz inspirującą atmosferę do
+            osiągania swoich celów fitnessowych. Dołącz do nas i zacznij swoją
+            drogę do lepszej kondycji już dziś!
           </p>
         </div>
       </div>
