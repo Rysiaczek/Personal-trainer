@@ -88,24 +88,9 @@
 .zip__element {
   width: 200px;
   height: 300px;
-  /* width: 300px;
-  height: 400px; */
   border-radius: 10px;
-  /* position: sticky; */
   top: 50%;
   transform: translate(-50%, -50%);
-}
-.cloud1 {
-  width: 200px;
-  height: 100px;
-}
-.cloud2 {
-  width: 100px;
-  height: 50px;
-}
-.cloud3 {
-  width: 150px;
-  height: 80px;
 }
 
 @media (min-width: 576px) {
@@ -224,4 +209,23 @@
   .about-zip {
     top: 40%;
   }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.8s ease forwards;
+}
+
+.about-content__element {
+  opacity: 0;
 }

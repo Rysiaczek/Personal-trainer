@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Marquee from "react-fast-marquee";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
@@ -8,6 +8,39 @@ import "../css/about.css";
 
 function About() {
   const [rotation, setRotation] = useState(0);
+
+  const elementOneRef = useRef(null);
+  const elementTwoRef = useRef(null);
+  const elementThreeRef = useRef(null);
+  const elementFourRef = useRef(null);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("slide-in");
+        } else {
+          entry.target.classList.remove("slide-in");
+        }
+      });
+    }, observerOptions);
+
+    observer.observe(elementOneRef.current);
+    observer.observe(elementTwoRef.current);
+    observer.observe(elementThreeRef.current);
+    observer.observe(elementFourRef.current);
+
+    return () => {
+      if (elementOneRef.current) observer.unobserve(elementOneRef.current);
+      if (elementTwoRef.current) observer.unobserve(elementTwoRef.current);
+      if (elementThreeRef.current) observer.unobserve(elementThreeRef.current);
+      if (elementFourRef.current) observer.unobserve(elementFourRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +86,9 @@ function About() {
         <div className="about-content__element about-content__element-oneImg">
           <img src={process.env.PUBLIC_URL + "/img/aboutPhoto1.jpg"} alt="" />
         </div>
-        <div className="about-content__element about-content__element-one">
+        <div
+          className="about-content__element about-content__element-one"
+          ref={elementOneRef}>
           <p>
             Oferuję profesjonalne treningi personalne, grupowe i firmowe w
             siłowni Power on Gym w Chojnie, która jest doskonale wyposażona i
@@ -61,7 +96,9 @@ function About() {
             obejmuje:
           </p>
         </div>
-        <div className="about-content__element about-content__element-two">
+        <div
+          className="about-content__element about-content__element-two"
+          ref={elementTwoRef}>
           <p>
             Treningi personalne – Spersonalizowane sesje treningowe, które są
             dostosowane do Twoich indywidualnych celów, poziomu zaawansowania
@@ -70,7 +107,9 @@ function About() {
             dostosowywanie planu treningowego do Twoich potrzeb.
           </p>
         </div>
-        <div className="about-content__element about-content__element-three">
+        <div
+          className="about-content__element about-content__element-three"
+          ref={elementThreeRef}>
           <p>
             Treningi grupowe – Dynamiczne i motywujące zajęcia prowadzone w
             grupie, które łączą różnorodne formy ćwiczeń. To doskonała okazja do
@@ -79,7 +118,9 @@ function About() {
             zainteresowaniach.
           </p>
         </div>
-        <div className="about-content__element about-content__element-four">
+        <div
+          className="about-content__element about-content__element-four"
+          ref={elementFourRef}>
           <p>
             Nasza siłownia w Chojnie to miejsce, gdzie znajdziesz nowoczesny
             sprzęt, profesjonalną obsługę oraz inspirującą atmosferę do
