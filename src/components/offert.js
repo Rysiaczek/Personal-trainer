@@ -1,7 +1,6 @@
 import Slider from "react-slick";
 import "../css/offert.css";
 
-
 function Offert() {
   var settings = {
     dots: true,

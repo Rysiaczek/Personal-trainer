@@ -93,6 +93,9 @@
 .contact__footer-links a {
   font-size: 1rem;
 }
+.contact__footer-links a span {
+  display: block;
+}
 .contact__footer p {
   font-size: 0.7rem;
 }
@@ -101,6 +104,11 @@
   display: flex;
   flex-direction: column;
   align-items: left;
+  text-align: center;
+  width: 60%;
+}
+.email__link {
+  text-transform: lowercase;
 }
 .error-message {
   color: red;
@@ -112,8 +120,10 @@ input:-internal-autofill-selected {
 }
 
 @media (min-width: 500px) {
+  .contact__footer-links {
+    width: 100%;
+  }
 }
-
 @media (min-width: 600px) {
 }
 
@@ -127,7 +137,7 @@ input:-internal-autofill-selected {
   }
   .contact__footer-links {
     display: block;
-    flex-direction: none;
+    flex-direction: row;
     justify-content: none;
     align-items: none;
   }
@@ -138,6 +148,9 @@ input:-internal-autofill-selected {
   }
   .contact__footer-links a {
     font-size: 1.3rem;
+  }
+  .contact__footer-links a span {
+    display: inline;
   }
 }
 

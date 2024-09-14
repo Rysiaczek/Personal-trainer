@@ -4,9 +4,19 @@ nav {
   z-index: 5;
   width: 100%;
 }
+.nav__title {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__title img {
+  width: 50px;
+  height: 50px;
+}
 .nav-container {
   margin: 0 auto;
-  padding: 10px 50px;
+  padding: 10px 0px;
   margin-top: -20px;
   display: flex;
   justify-content: space-between;
@@ -31,7 +41,12 @@ nav {
   position: relative;
   z-index: 3;
   color: #d7d9d7;
+  margin-right: 20px;
 }
+.nav-menu__button p {
+  margin: 0 auto;
+}
+
 .nav-menu__button::before {
   content: "";
   position: absolute;
@@ -57,7 +72,7 @@ nav {
   right: 0;
   top: -20px;
   width: 100%;
-  height: 700%;
+  height: 400%;
 }
 .nav-activeElement__container {
   width: 100%;
@@ -120,12 +135,16 @@ nav {
     font-size: 1.5rem;
   }
   .nav-container {
-    margin-top: -10px;
+    margin-top: -40px;
+    padding: 10px 50px;
   }
   .nav-menu-items p {
     margin: 10px 0;
     padding-right: 40px;
     font-size: 3rem;
+  }
+  .nav-menu__button {
+    margin-right: 0px;
   }
 }
 

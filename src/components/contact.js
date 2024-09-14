@@ -175,6 +175,10 @@ function Contact() {
                 rel="noreferrer">
                 Facebook
               </a>
+              <a className="ms-lg-3">
+                <span>+48 575 063 205</span>
+              </a>
+              <a className="ms-lg-3 email__link">treningzkonradem@gmail.com</a>
             </div>
             <div>
               <a href="#">made by EriNext</a>

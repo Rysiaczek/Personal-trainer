@@ -63,6 +63,7 @@ function NavBarr() {
     <nav>
       <div className="nav-container">
         <div className="nav__title">
+          <img src={process.env.PUBLIC_URL + "/img/logo.png"} alt="" />
           <p style={{ lineHeight: "1" }}>
             Konrad <br />
             Oleszczuk

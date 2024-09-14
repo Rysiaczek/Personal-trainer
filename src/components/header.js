@@ -55,7 +55,9 @@ function Header({ videoRef }) {
             <div className="row justify-content-flex-start justify-content-lg-center">
               <div className="col col-lg-4 header-content-title justify-content-end">
                 <p className=" text-light fw-bold mb-5  ">
-                  Trener<span>Personalny</span>
+                  Trener
+                  <br />
+                  Personalny
                 </p>
               </div>
             </div>
