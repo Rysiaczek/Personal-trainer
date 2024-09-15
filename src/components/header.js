@@ -62,7 +62,7 @@ function Header({ videoRef }) {
               </div>
             </div>
             <div className="row  justify-content-lg-between">
-              <div className="col-0 col-lg-5">
+              <div className="col-0 col-lg-5 heder-text__conetent">
                 <p className="text-light text-left mt-3 mt-lg-0">
                   Witaj! Nazywam się Konrad Oleszczuk, jestem trenerem
                   personalnym z pasją do pomagania w osiąganiu twoich celów.
