@@ -12,6 +12,7 @@ function About() {
   const elementTwoRef = useRef(null);
   const elementThreeRef = useRef(null);
   const elementFourRef = useRef(null);
+  const elementFiveRef = useRef(null);
   const elementimgRef = useRef(null);
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function About() {
     observer.observe(elementTwoRef.current);
     observer.observe(elementThreeRef.current);
     observer.observe(elementFourRef.current);
+    observer.observe(elementFiveRef.current);
 
     return () => {
       if (elementOneRef.current) observer.unobserve(elementimgRef.current);
@@ -39,6 +41,7 @@ function About() {
       if (elementTwoRef.current) observer.unobserve(elementTwoRef.current);
       if (elementThreeRef.current) observer.unobserve(elementThreeRef.current);
       if (elementFourRef.current) observer.unobserve(elementFourRef.current);
+      if (elementFourRef.current) observer.unobserve(elementFiveRef.current);
     };
   }, []);
 
@@ -122,7 +125,7 @@ function About() {
         </div>
         <div
           className="about-content__element about-content__element-four"
-          ref={elementThreeRef}>
+          ref={elementFourRef}>
           <p>
             Rozpisywanie planów treningowych - wiesz jak wykonywać poprawnie
             ćwiczenia, ale czujesz się przetrenowany po każdym treningu i nie
@@ -133,7 +136,7 @@ function About() {
         </div>
         <div
           className="about-content__element about-content__element-five"
-          ref={elementFourRef}>
+          ref={elementFiveRef}>
           <p>
             Nasza siłownia w Chojnie to miejsce, gdzie znajdziesz nowoczesny
             sprzęt, profesjonalną obsługę oraz inspirującą atmosferę do
