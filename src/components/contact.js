@@ -158,9 +158,6 @@ function Contact() {
           </div>
 
           <div className="contact__footer">
-            <div>
-              <p>&copy;Konrad Oleszczuk / Wszelkie prawa zastrzeżone</p>
-            </div>
             <div className="contact__footer-links">
               <a
                 href="https://www.instagram.com/kon_r6_ad/"
@@ -180,8 +177,13 @@ function Contact() {
               </a>
               <a className="ms-lg-3 email__link">treningzkonradem@gmail.com</a>
             </div>
-            <div>
-              <a href="#">made by EriNext</a>
+            <div className="mt-2 footer__info">
+              <div>
+                <p>&copy;Konrad Oleszczuk / Wszelkie prawa zastrzeżone</p>
+              </div>
+              <div className="mt-0 author">
+                <a href="#">made by EriNext</a>
+              </div>
             </div>
           </div>
         </div>

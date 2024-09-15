@@ -1,6 +1,6 @@
 .contact {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
 }
 .contact__fixed {
   position: fixed;
@@ -8,7 +8,7 @@
   height: 100%;
   width: 100%;
   background-color: #d7d9d7;
-  padding-top: 10vh;
+  padding-top: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   justify-content: top;
-  height: 60vh;
+  height: 100vh;
   align-items: center;
 }
 .contact-body .col {
@@ -83,10 +83,15 @@
   padding: 0 0px;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
+}
+.footer__info p {
+  margin: 0;
+  padding: 0;
 }
 .contact__footer a {
   color: #3d403f;
