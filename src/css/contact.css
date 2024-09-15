@@ -1,6 +1,6 @@
 .contact {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 }
 .contact__fixed {
   position: fixed;
@@ -18,14 +18,18 @@
 .contact .container {
   bottom: 0;
   width: 100%;
-  height: 100vh;
-  padding-top: 10vh;
+  padding-top: 6vh;
 }
+
 .contact-body {
   display: flex;
   flex-direction: column;
   justify-content: top;
+  height: 60vh;
   align-items: center;
+}
+.contact-body .col {
+  height: 50px;
 }
 .contact-body input {
   background-color: transparent;
@@ -128,6 +132,12 @@ input:-internal-autofill-selected {
 }
 
 @media (min-width: 992px) {
+  .contact-body .col {
+    height: 80px;
+  }
+  .contact {
+    height: 90vh;
+  }
   .contact__title p {
     margin-top: 100px;
     transform: translateY(0px);

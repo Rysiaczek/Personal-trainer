@@ -62,8 +62,8 @@ function About() {
         </div>
         <div className="about-title__text mt-5">
           <p>
-            Twoje zdrowie i dobre samopoczucie są najważniejsze, a ja pokażę Ci
-            jak osiągnąć swoje cele.
+            Twoje zdrowie i dobre samopoczucie jest najważniejsze, więc daj
+            sobie pomóc i zacznij już dziś!
           </p>
         </div>
       </div>
@@ -92,43 +92,55 @@ function About() {
           className="about-content__element about-content__element-one"
           ref={elementOneRef}>
           <p>
-            Oferuję profesjonalne treningi personalne, grupowe i firmowe w
-            siłowni Power on Gym w Chojnie, która jest doskonale wyposażona i
-            dostosowana do różnorodnych potrzeb fitnessowych. Nasza oferta
-            obejmuje:
+            Oferuję profesjonalne usługi treningowe na siłowni Power on Gym w
+            Chojnie, która jest doskonale wyposażona i dostosowana do
+            różnorodnych potrzeb treningowych. Nasza oferta obejmuje:
           </p>
+          <hr />
         </div>
         <div
           className="about-content__element about-content__element-two"
           ref={elementTwoRef}>
           <p>
-            Treningi personalne – Spersonalizowane sesje treningowe, które są
-            dostosowane do Twoich indywidualnych celów, poziomu zaawansowania
+            Treningi indywidualne – Spersonalizowane sesje treningowe, które są
+            dostosowane do Twoich indywidualnych potrzeb, poziomu zaawansowania
             oraz preferencji. Naszym celem jest zapewnienie Ci optymalnych
-            rezultatów poprzez dokładne analizowanie Twoich postępów i
-            dostosowywanie planu treningowego do Twoich potrzeb.
+            rezultatów poprzez dokładne analizowanie i raportowanie Twoich
+            postępów.
           </p>
+          <hr />
         </div>
         <div
           className="about-content__element about-content__element-three"
           ref={elementThreeRef}>
           <p>
-            Treningi grupowe – Dynamiczne i motywujące zajęcia prowadzone w
-            grupie, które łączą różnorodne formy ćwiczeń. To doskonała okazja do
-            pracy nad kondycją, siłą i elastycznością w przyjaznej atmosferze, a
-            także możliwość spotkania nowych ludzi o podobnych
-            zainteresowaniach.
+            Trening w parze - jeżeli jesteś nieśmiały, lub wolisz ćwiczyć w
+            towarzystwie. Nic straconego! Zaproś swojego przyjaciela na trening,
+            jeśli macie wspólny cel.
           </p>
+          <hr />
         </div>
         <div
           className="about-content__element about-content__element-four"
+          ref={elementThreeRef}>
+          <p>
+            Rozpisywanie planów treningowych - wiesz jak wykonywać poprawnie
+            ćwiczenia, ale czujesz się przetrenowany po każdym treningu i nie
+            widzisz progresu? Odezwij się do mnie po plan, a z pewnością
+            zobaczysz różnicę.
+          </p>
+          <hr />
+        </div>
+        <div
+          className="about-content__element about-content__element-five"
           ref={elementFourRef}>
           <p>
             Nasza siłownia w Chojnie to miejsce, gdzie znajdziesz nowoczesny
             sprzęt, profesjonalną obsługę oraz inspirującą atmosferę do
-            osiągania swoich celów fitnessowych. Dołącz do nas i zacznij swoją
+            osiągania swoich szczytnych celów. Dołącz do nas i zacznij swoją
             drogę do lepszej kondycji już dziś!
           </p>
+          <hr />
         </div>
       </div>
     </div>

@@ -65,11 +65,11 @@ function Header({ videoRef }) {
               <div className="col-0 col-lg-5">
                 <p className="text-light text-left mt-3 mt-lg-0">
                   Witaj! Nazywam się Konrad Oleszczuk, jestem trenerem
-                  personalnym z pasją do pomagania w osiąganiu celów fitness.
+                  personalnym z pasją do pomagania w osiąganiu twoich celów.
                   Niezależnie od tego, czy chcesz poprawić formę, zbudować siłę,
-                  czy zredukować wagę, przygotuję dla Ciebie indywidualny plan
-                  treningowy, który pozwoli Ci szybko zobaczyć efekty. Zapraszam
-                  do współpracy!
+                  czy zredukować wagę. Przygotuję dla Ciebie indywidualny plan
+                  treningowy, który pozwoli Ci szybko zauważyć efekty, już po
+                  miesiącu współpracy!
                 </p>
               </div>
 

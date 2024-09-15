@@ -38,7 +38,7 @@ function Offert() {
       <div className="slider-container">
         <Slider {...settings}>
           <div className="item">
-            <p className="title mt-4 ms-4">Trening odchudzający</p>
+            <p className="title mt-4 ms-4">Treningi odchudzający</p>
             <div className="text-end mt-4 me-3 item-body">
               <p>Trening cardio (wytrzymałościowy)</p>
               <p>Trening interwałowy o wysokiej intensywności (HIIT)</p>
