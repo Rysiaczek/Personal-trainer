@@ -152,7 +152,7 @@ function Contact() {
 
             <input
               type="submit"
-              className="btn btn-outline-secondary button mt-4 mb-5 mb-lg-0"
+              className="btn btn-outline-secondary button mt-4 mb-3 mb-lg-0"
               value={"Wyślij"}
             />
           </div>
