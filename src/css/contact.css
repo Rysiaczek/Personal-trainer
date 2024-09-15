@@ -102,7 +102,7 @@
   font-size: 1rem;
 }
 .contact__footer-links a span {
-  display: block;
+  display: inline;
 }
 .contact__footer p {
   font-size: 0.7rem;
