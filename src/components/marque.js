@@ -27,7 +27,7 @@ const Marque = () => {
   return (
     <div className="marque position-relative z-3  ">
       <div className="marque-img sticky ">
-        <img src={process.env.PUBLIC_URL + "/img/photo.jpg"} alt="" />
+        <img src={process.env.PUBLIC_URL + "/img/img1.jpg"} alt="" />
         <div className="marque-bg">
           <Marquee speed={200}>
             <p className="marque-bg__event">We're all gonna make it, brah</p>
