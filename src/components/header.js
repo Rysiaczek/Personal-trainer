@@ -89,7 +89,7 @@ function Header({ videoRef }) {
           style={height ? { display: "none" } : { display: "block" }}>
           <video autoPlay muted loop playsInline id="myVideo" ref={videoRef}>
             <source
-              src={process.env.PUBLIC_URL + "/img/header-bg.mp4"}
+              src={process.env.PUBLIC_URL + "/img/video.mp4"}
               type="video/mp4"
             />
           </video>
