@@ -173,7 +173,7 @@ function Contact() {
                 Facebook
               </a>
               <a className="ms-lg-3">
-                <span>+48 575 063 205</span>
+                <span>Tel. +48 575 063 205</span>
               </a>
               <a className="ms-lg-3 email__link">treningzkonradem@gmail.com</a>
             </div>
