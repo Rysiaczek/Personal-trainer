@@ -123,8 +123,17 @@
   font-size: 14px;
   margin-top: 5px;
 }
+
 input:-internal-autofill-selected {
   background-color: transparent !important;
+}
+
+.footer__p {
+  display: inline-block;
+}
+.contact__footer-links p {
+  font-size: 1.3rem;
+  color: #3d403f;
 }
 
 @media (min-width: 500px) {

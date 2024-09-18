@@ -172,19 +172,17 @@ function Contact() {
                 rel="noreferrer">
                 Facebook
               </a>
-              <a className="ms-lg-3">
-                <span>
-                  <span className="text-lowercase">Tel.</span> +48 575 063 205
-                </span>
-              </a>
-              <a className="ms-lg-3 email__link">treningzkonradem@gmail.com</a>
+              <p className="ms-lg-3 footer__p">Tel. +48 575 063 205</p>
+              <p className="ms-lg-3 email__link footer__p">
+                treningzkonradem@gmail.com
+              </p>
             </div>
-            <div className="mt-2 footer__info">
+            <div className="mt-2 footer__info ">
               <div>
                 <p>&copy;Konrad Oleszczuk / Wszelkie prawa zastrzeżone</p>
               </div>
               <div className="mt-0 author">
-                <a href="#">made by EriNext</a>
+                <a href="https://erinext.com/">made by EriNext</a>
               </div>
             </div>
           </div>
